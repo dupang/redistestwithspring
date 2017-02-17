@@ -2,20 +2,22 @@ package com.x.redis.dao.impl;
 
 import com.x.redis.dao.UserDAO;
 import com.x.redis.obj.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 
 /**
  * Created by Administrator on 2017/2/17.
  */
+@Service
 public class UserDAOImpl implements UserDAO {
 
-    @Autowired
+    @Resource
     protected RedisTemplate<Serializable, Serializable> redisTemplate;
 
     public void saveUser(final User user) {
