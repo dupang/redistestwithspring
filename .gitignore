@@ -1,6 +1,8 @@
 /.project
 *.iml
 .idea/*
+*.compiler.xml
+*.misc.xml
 
 
 
